@@ -1,0 +1,60 @@
+.container {
+  background: #20262e;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #e9e8e8;
+  padding: 10px 20px;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 2.5em;
+}
+
+.userWrap button {
+  color: inherit;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+.userWrap .signin {
+  margin-right: 10px;
+}
+
+.movieContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px 30px;
+}
+
+.paginations {
+  display: flex;
+  justify-content: center;
+  gap: 0 20px;
+  padding: 20px 0;
+}
+
+.paginations button {
+  color: #e9e8e8;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+@media screen and (max-width: 980px) {
+  .movieContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movieContainer {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 10px;
+  }
+}

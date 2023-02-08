@@ -3,3 +3,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+button {
+  border: 0;
+  outline: 0;
+  background: inherit;
+  cursor: pointer;
+}
