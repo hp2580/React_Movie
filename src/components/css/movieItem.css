@@ -1,9 +1,13 @@
+a {
+  overflow: hidden;
+}
+
 .movieWrap {
   width: 100%;
-  overflow: hidden;
+  height: 100%;
   padding: 10px;
   border-radius: 10px;
-  background: #bdcdd6;
+  background: #4b5e75;
   position: relative;
 }
 

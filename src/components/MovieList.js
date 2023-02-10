@@ -2,8 +2,13 @@ import React from "react";
 import "./css/movieList.css";
 import MovieItem from "./MovieItem";
 
-const MovieList = ({ movies }) => {
+const MovieList = ({ setIsLoading, movies, getMovie, page, setPage }) => {
   const { results } = movies;
+  const changePage = (page) => {
+    setIsLoading(true);
+    setPage(page);
+    getMovie();
+  };
   return (
     <div className="container">
       <div className="nav">
@@ -23,10 +28,18 @@ const MovieList = ({ movies }) => {
         })}
       </div>
       <div className="paginations">
-        <button type="button">1</button>
-        <button type="button">2</button>
-        <button type="button">3</button>
-        <button type="button">4</button>
+        <button type="button" onClick={() => changePage(1)}>
+          1
+        </button>
+        <button type="button" onClick={() => changePage(2)}>
+          2
+        </button>
+        <button type="button" onClick={() => changePage(3)}>
+          3
+        </button>
+        <button type="button" onClick={() => changePage(4)}>
+          4
+        </button>
       </div>
     </div>
   );
