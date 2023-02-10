@@ -20,6 +20,7 @@
   padding: 20px 30px;
   gap: 0 30px;
   width: 100vw;
+  background: inherit;
 }
 
 .poster {
@@ -38,8 +39,8 @@
   word-break: keep-all;
 }
 
-.title {
-  margin-bottom: 30px;
+.rating {
+  margin: 10px 0 20px 0;
 }
 
 .overview {
@@ -67,7 +68,6 @@
 
   .title {
     font-size: 1.3em;
-    margin-bottom: 20px;
   }
 
   .overview {

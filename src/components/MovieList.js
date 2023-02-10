@@ -2,23 +2,29 @@ import React from "react";
 import "./css/movieList.css";
 import MovieItem from "./MovieItem";
 
-const MovieList = ({ setIsLoading, movies, getMovie, page, setPage }) => {
+const MovieList = ({ setIsLoading, movies, getMovie, setPage, setRegion }) => {
   const { results } = movies;
   const changePage = (page) => {
     setIsLoading(true);
     setPage(page);
     getMovie();
   };
+  const changeRegion = (region) => {
+    setIsLoading(true);
+    setPage(1);
+    setRegion(region);
+    getMovie();
+  };
   return (
     <div className="container">
       <div className="nav">
         <h1 className="logo">U-MOVIE</h1>
-        <div className="userWrap">
-          <button type="button" className="signin">
-            로그인
+        <div className="regionWrap">
+          <button type="button" onClick={() => changeRegion("KR")}>
+            국내상영
           </button>
-          <button type="button" className="signup">
-            회원가입
+          <button type="button" onClick={() => changeRegion("US")}>
+            해외상영
           </button>
         </div>
       </div>

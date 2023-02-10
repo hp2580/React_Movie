@@ -7,10 +7,11 @@ import MovieList from "./components/MovieList";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(1);
+  const [region, setRegion] = useState("KR");
   const [movies, setMovies] = useState([]);
   function getMovie() {
     fetch(
-      `https://api.themoviedb.org/3/movie/now_playing?api_key=4b61e5cee6c551bf0bc26d42d163a586&language=ko&page=${page}&region=KR`
+      `https://api.themoviedb.org/3/movie/now_playing?api_key=4b61e5cee6c551bf0bc26d42d163a586&language=ko&page=${page}&region=${region}`
     )
       .then((res) => {
         return res.json();
@@ -27,13 +28,6 @@ function App() {
   if (isLoading === false)
     return (
       <BrowserRouter>
-        {/* <MovieList
-          setIsLoading={setIsLoading}
-          movies={movies}
-          getMovie={getMovie}
-          page={page}
-          setPage={setPage}
-        /> */}
         <Routes>
           <Route
             path="/"
@@ -43,8 +37,8 @@ function App() {
                 setIsLoading={setIsLoading}
                 movies={movies}
                 getMovie={getMovie}
-                page={page}
                 setPage={setPage}
+                setRegion={setRegion}
               />
             }
           />

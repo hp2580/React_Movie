@@ -4,26 +4,26 @@
 
 .nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   color: #e9e8e8;
   padding: 10px 20px;
   z-index: 100;
+  border-bottom: 1px solid #e9e8e8;
 }
 
 .logo {
   font-size: 2.5em;
 }
 
-.userWrap button {
-  color: inherit;
-  font-size: 1em;
-  font-weight: 600;
-  letter-spacing: -1px;
+.regionWrap {
+  display: flex;
+  gap: 0 20px;
+  margin-left: 20px;
 }
 
-.userWrap .signin {
-  margin-right: 10px;
+.regionWrap button {
+  font-size: 1.2em;
+  color: inherit;
 }
 
 .movieContainer {
@@ -56,5 +56,11 @@
   .movieContainer {
     grid-template-columns: repeat(2, 1fr);
     padding: 20px 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 1.8em;
   }
 }

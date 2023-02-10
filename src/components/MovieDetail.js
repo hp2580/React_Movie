@@ -24,6 +24,7 @@ const MovieDetail = () => {
         </div>
         <div className="desc">
           <h1 className="title">{result.title}</h1>
+          <span className="rating">👍{result.vote_average}</span>
           <div className="genres">{result.genre_ids.map((id) => {})}</div>
           <p className="overview">{result.overview}</p>
         </div>
