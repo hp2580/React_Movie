@@ -17,13 +17,8 @@ const MovieListUS = ({
   }
 
   useEffect(() => {
-    console.log("US");
     changeRegion("US");
   }, []);
-
-  useEffect(() => {
-    getMovie();
-  }, [page]);
 
   if (!isLoading) {
     return (

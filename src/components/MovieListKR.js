@@ -17,13 +17,8 @@ const MovieListKR = ({
   }
 
   useEffect(() => {
-    console.log("KR");
     changeRegion("KR");
   }, []);
-
-  useEffect(() => {
-    getMovie();
-  }, [page]);
 
   if (!isLoading) {
     return (

@@ -45,7 +45,7 @@ function App() {
 
   useEffect(() => {
     getMovie();
-  }, [region]);
+  }, [region, page]);
 
   return (
     <div className="App">

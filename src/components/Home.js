@@ -2,14 +2,7 @@ import React, { useEffect } from "react";
 import "./css/movieList.css";
 import MovieItem from "./MovieItem";
 
-const Home = ({
-  isLoading,
-  movies,
-  getMovie,
-  page,
-  changeRegion,
-  handlePaging,
-}) => {
+const Home = ({ isLoading, movies, changeRegion, handlePaging }) => {
   const { results, total_pages } = movies;
   const pages = [];
   for (let i = 1; i <= total_pages; i++) {
@@ -17,13 +10,8 @@ const Home = ({
   }
 
   useEffect(() => {
-    console.log("home");
     changeRegion("");
   }, []);
-
-  useEffect(() => {
-    getMovie();
-  }, [page]);
 
   if (!isLoading) {
     return (
