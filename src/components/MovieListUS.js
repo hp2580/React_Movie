@@ -17,8 +17,8 @@ const MovieListUS = ({
   }
 
   useEffect(() => {
+    console.log("US");
     changeRegion("US");
-    getMovie();
   }, []);
 
   useEffect(() => {

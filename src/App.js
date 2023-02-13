@@ -43,6 +43,10 @@ function App() {
     window.scrollTo({ top: 0 });
   };
 
+  useEffect(() => {
+    getMovie();
+  }, [region]);
+
   return (
     <div className="App">
       <div className="nav">
