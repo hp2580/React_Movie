@@ -51,13 +51,13 @@ function App() {
     <div className="App">
       <div className="nav">
         <Link to={"/"}>
-          <h1 className="logo">U-MOVIE</h1>
+          <h1 className="logo">MOVIE</h1>
         </Link>
         <div className="regionWrap">
-          <Link to={"/KR"} onClick={() => changeRegion("KR")}>
+          <Link to={"/movie/KR"} onClick={() => changeRegion("KR")}>
             국내상영
           </Link>
-          <Link to={"/US"} onClick={() => changeRegion("US")}>
+          <Link to={"/movie/US"} onClick={() => changeRegion("US")}>
             해외상영
           </Link>
         </div>
@@ -79,7 +79,7 @@ function App() {
           }
         />
         <Route
-          path="/KR"
+          path="/movie/KR"
           element={
             <MovieListKR
               isLoading={isLoading}
@@ -93,7 +93,7 @@ function App() {
           }
         />
         <Route
-          path="/US"
+          path="/movie/US"
           element={
             <MovieListUS
               isLoading={isLoading}

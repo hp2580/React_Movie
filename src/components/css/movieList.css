@@ -94,11 +94,6 @@
   .movieContainer {
     grid-template-columns: repeat(2, 1fr);
     padding: 20px 10px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .logo {
-    font-size: 1.8em;
+    gap: 10px;
   }
 }

@@ -9,6 +9,7 @@
 .nav {
   display: flex;
   align-items: center;
+  gap: 0 30px;
   color: #e9e8e8;
   padding: 10px 20px;
   z-index: 100;
@@ -22,16 +23,41 @@
 .regionWrap {
   display: flex;
   gap: 0 20px;
-  margin-left: 20px;
 }
 
-.regionWrap button {
-  font-size: 1.2em;
+.regionWrap a {
+  font-size: 1.5em;
+  font-weight: 600;
   color: inherit;
 }
 
 @keyframes load {
   to {
     transform: translateY(-10px) scale(0.7);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 2em;
+  }
+
+  .regionWrap a {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav {
+    padding: 10px;
+    gap: 0 20px;
+  }
+
+  .logo {
+    font-size: 1.6em;
+  }
+
+  .regionWrap a {
+    font-size: 1em;
   }
 }
