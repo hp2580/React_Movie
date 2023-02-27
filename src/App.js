@@ -51,21 +51,21 @@ function App() {
   return (
     <div className="App">
       <div className="nav">
-        <Link to={"/"}>
+        <Link to={"/React_Movie"}>
           <h1 className="logo">MOVIE</h1>
         </Link>
         <div className="regionWrap">
-          <Link to={"/movie/KR"} onClick={() => changeRegion("KR")}>
+          <Link to={"/React_Movie/movie/KR"} onClick={() => changeRegion("KR")}>
             국내상영
           </Link>
-          <Link to={"/movie/US"} onClick={() => changeRegion("US")}>
+          <Link to={"/React_Movie/movie/US"} onClick={() => changeRegion("US")}>
             해외상영
           </Link>
         </div>
       </div>
       <Routes>
         <Route
-          path="/"
+          path="/React_Movie"
           exact
           element={
             <Home
@@ -78,7 +78,7 @@ function App() {
           }
         />
         <Route
-          path="/movie/KR"
+          path="/React_Movie/movie/KR"
           element={
             <MovieListKR
               isLoading={isLoading}
@@ -89,7 +89,7 @@ function App() {
           }
         />
         <Route
-          path="/movie/US"
+          path="/React_Movie/movie/US"
           element={
             <MovieListUS
               isLoading={isLoading}
@@ -99,7 +99,7 @@ function App() {
             />
           }
         />
-        <Route path="/movie/:id" element={<MovieDetail />} />
+        <Route path="/React_Movie/movie/:id" element={<MovieDetail />} />
       </Routes>
     </div>
   );

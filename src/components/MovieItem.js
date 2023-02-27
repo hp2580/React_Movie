@@ -5,7 +5,7 @@ import "./css/movieItem.css";
 const MovieItem = ({ result }) => {
   if (result.poster_path !== null) {
     return (
-      <Link to={`/movie/:${result.id}`} state={{ result: result }}>
+      <Link to={`/React_Movie/movie/:${result.id}`} state={{ result: result }}>
         <div className="movieWrap">
           <div className="imgWrap">
             <img
@@ -24,7 +24,7 @@ const MovieItem = ({ result }) => {
     );
   } else {
     return (
-      <Link to={`/movie/:${result.id}`} state={{ result: result }}>
+      <Link to={`/React_Movie/movie/:${result.id}`} state={{ result: result }}>
         <div className="movieWrap">
           <div className="imgWrap">
             <span className="empty">
