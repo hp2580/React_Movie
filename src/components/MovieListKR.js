@@ -2,14 +2,7 @@ import React, { useEffect } from "react";
 import "./css/movieList.css";
 import MovieItem from "./MovieItem";
 
-const MovieListKR = ({
-  isLoading,
-  movies,
-  getMovie,
-  page,
-  changeRegion,
-  handlePaging,
-}) => {
+const MovieListKR = ({ isLoading, movies, changeRegion, handlePaging }) => {
   const { results, total_pages } = movies;
   const pages = [];
   for (let i = 1; i <= total_pages; i++) {
@@ -18,6 +11,7 @@ const MovieListKR = ({
 
   useEffect(() => {
     changeRegion("KR");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (!isLoading) {

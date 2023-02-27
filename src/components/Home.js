@@ -11,6 +11,7 @@ const Home = ({ isLoading, movies, changeRegion, handlePaging }) => {
 
   useEffect(() => {
     changeRegion("");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (!isLoading) {

@@ -13,6 +13,7 @@ function App() {
   const [movies, setMovies] = useState([]);
   const paginations = document.querySelectorAll(".paginations button");
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   function getMovie() {
     fetch(
       `https://api.themoviedb.org/3/movie/now_playing?api_key=4b61e5cee6c551bf0bc26d42d163a586&language=ko&page=${page}&region=${region}`
@@ -45,7 +46,7 @@ function App() {
 
   useEffect(() => {
     getMovie();
-  }, [region, page]);
+  }, [region, page, getMovie]);
 
   return (
     <div className="App">
@@ -69,9 +70,7 @@ function App() {
           element={
             <Home
               isLoading={isLoading}
-              getMovie={getMovie}
               movies={movies}
-              page={page}
               setPage={setPage}
               changeRegion={changeRegion}
               handlePaging={handlePaging}
@@ -83,10 +82,7 @@ function App() {
           element={
             <MovieListKR
               isLoading={isLoading}
-              getMovie={getMovie}
               movies={movies}
-              page={page}
-              setPage={setPage}
               changeRegion={changeRegion}
               handlePaging={handlePaging}
             />
@@ -97,10 +93,7 @@ function App() {
           element={
             <MovieListUS
               isLoading={isLoading}
-              getMovie={getMovie}
               movies={movies}
-              page={page}
-              setPage={setPage}
               changeRegion={changeRegion}
               handlePaging={handlePaging}
             />
